@@ -21,10 +21,11 @@ const SearchBar = () => {
             placeholder="Buscar Restaurante"
           ></TextInput>
         </View>
-        <Link href={"/"} asChild />
-        <TouchableOpacity style={styles.optionButton}>
-          <Ionicons name="options-outline" size={20} color={Colors.primary} />
-        </TouchableOpacity>
+        <Link href={"/(modal)/filter"} asChild>
+          <TouchableOpacity style={styles.optionButton}>
+            <Ionicons name="options-outline" size={20} color={Colors.primary} />
+          </TouchableOpacity>
+        </Link>
       </View>
     </View>
   );
