@@ -46,6 +46,30 @@ export default function RootLayoutNav() {
             ),
           }}
         />
+        <Stack.Screen
+          name="(modal)/location-search/index"
+          options={{
+            presentation: "fullScreenModal",
+            headerTitle: "Sua Localização",
+            headerShadowVisible: false,
+            headerStyle: {
+              backgroundColor: Colors.grey,
+            },
+            headerLeft: () => (
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.goBack();
+                }}
+              >
+                <Ionicons
+                  name="close-outline"
+                  size={28}
+                  color={Colors.primary}
+                />
+              </TouchableOpacity>
+            ),
+          }}
+        />
       </Stack>
     </BottomSheetModalProvider>
   );

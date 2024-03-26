@@ -47,14 +47,23 @@ const BottomSheet = forwardRef<Ref>((props, ref) => {
         </View>
 
         <Text style={styles.subheader}>Sua Localização</Text>
-        <Link href={"/"} asChild />
-        <TouchableOpacity>
-          <View style={styles.item}>
-            <Ionicons name="location-outline" size={20} color={Colors.medium} />
-            <Text style={{ flex: 1 }}>Localização Atual</Text>
-            <Ionicons name="chevron-forward" size={20} color={Colors.primary} />
-          </View>
-        </TouchableOpacity>
+        <Link href={"/(modal)/location-search"} asChild>
+          <TouchableOpacity>
+            <View style={styles.item}>
+              <Ionicons
+                name="location-outline"
+                size={20}
+                color={Colors.medium}
+              />
+              <Text style={{ flex: 1 }}>Localização Atual</Text>
+              <Ionicons
+                name="chevron-forward"
+                size={20}
+                color={Colors.primary}
+              />
+            </View>
+          </TouchableOpacity>
+        </Link>
 
         <Text style={styles.subheader}>Tempo de Entrega</Text>
         <TouchableOpacity>
