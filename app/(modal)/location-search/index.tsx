@@ -4,6 +4,8 @@ import MapView from "react-native-maps";
 import styles from "./styles";
 import { useNavigation } from "expo-router";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
+import Colors from "@/constants/Colors";
+import { Ionicons } from "@expo/vector-icons";
 
 // process.env.EXPO_PUBLIC_GOOGLE_API_KEY
 
@@ -28,6 +30,25 @@ const LocationSearch = () => {
             latitude: point.lat,
             longitude: point.lng,
           });
+        }}
+        renderLeftButton={() => (
+          <View style={styles.boxIcon}>
+            <Ionicons name="search-outline" size={24} color={Colors.medium} />
+          </View>
+        )}
+        styles={{
+          container: {
+            flex: 0,
+          },
+          textInput: {
+            backgroundColor: Colors.grey,
+            paddingLeft: 35,
+            borderRadius: 10,
+          },
+          textInputContainer: {
+            backgroundColor: "#fff",
+            padding: 8,
+          },
         }}
         query={{
           key: process.env.EXPO_PUBLIC_GOOGLE_API_KEY,

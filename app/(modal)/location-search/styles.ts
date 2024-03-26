@@ -25,6 +25,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
   },
+  boxIcon: {
+    position: "absolute",
+    left: 15,
+    top: 18,
+    zIndex: 1,
+  },
 });
 
 export default styles;
